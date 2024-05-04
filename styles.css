@@ -1,0 +1,194 @@
+/* Basic reset and body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: linear-gradient(270deg, #5a13a7, #1b5ac5);
+    background-size: 400% 400%;
+    animation: gradientAnimation 18s ease infinite;
+}
+
+/* Animated gradient background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation and Footer Styling */
+.navbar, footer {
+    background-color: #191919; /* Updated dark gray-black color */
+    padding: 1rem;
+    color: #f2f2f2; /* Updated brighter text color for contrast */
+}
+
+.navbar a, footer a {
+    color: #f2f2f2; /* Ensure links are also this brighter color for visibility */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.navbar a:hover, footer a:hover {
+    color: #cccccc; /* Lighter gray for hover effects */
+}
+
+.text-white {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Enhanced shadow for better readability */
+    /* Optional: background with padding and a border-radius for aesthetic text block */
+    background-color: rgba(46, 49, 45, 0.342); 
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold; /* Making text bolder */
+}
+
+
+/* Main Content Area Styling */
+main {
+    padding-top: 70px; /* Space for fixed navbar */
+}
+
+/* Section styling */
+section {
+    margin: 20px;
+    padding: 20px;
+}
+
+section:target {
+    padding-top: 100px; /* Space for the navbar */
+    margin-top: -100px; /* Pull the section up to align correctly */
+}
+
+/* Card Styling for various sections */
+.card {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent cards */
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.card-title {
+    color: #aad3ff; /* Light blue, for better readability */
+}
+
+.card-text {
+    color: #ccd; /* Lighter text color for readability */
+}
+
+/* Responsive Grid for Skills Section */
+#skills .col {
+    margin-bottom: 20px;
+}
+
+/* Icon styling */
+i {
+    font-size: 24px; /* Larger icons for better visibility */
+    margin-bottom: 5px;
+}
+
+
+
+/* Custom styles for carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000000; /* Black background for higher contrast */
+    border-radius: 50%; /* Circular background */
+    padding: 20px; /* Larger area to make the icon bigger and easier to click */
+    display: inline-block; /* Ensures proper alignment and display */
+    width: 60px; /* Specific width for the icon */
+    height: 60px; /* Specific height for the icon */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 10%; /* Wider area for easier clicking */
+}
+
+/* Override the default Bootstrap SVG background for the icons */
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M5.5 0l-5 4 5 4v-3h3v-2h-3v-3z"/%3E%3C/svg%3E');
+    background-size: 30px; /* Increase the size of the arrow itself */
+}
+
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M2.5 0v3h-3v2h3v3l5-4-5-4z"/%3E%3C/svg%3E');
+    background-size: 30px; /* Increase the size of the arrow itself */
+}
+
+/* Timeline styling */
+.timeline {
+    position: relative;
+    padding-left: 0;
+    list-style: none;
+    margin-left: 140px; /* Offset to the right to start after the dates */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; /* Start at the beginning of the timeline content area */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd; /* Light grey line running down the center of the content area */
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-left: 20px; /* Ensure padding for alignment */
+}
+
+.timeline-date {
+    width: 120px; /* Ensure width accommodates your date format */
+    position: absolute;
+    left: -140px; /* Position dates to the left of the vertical line */
+    text-align: right; /* Aligns the dates right so they appear lined up to the vertical line */
+}
+
+.timeline-content {
+    flex: 1;
+    padding-left: 10px; /* Slight padding next to the vertical line */
+}
+
+.timeline-item h4 {
+    margin-top: 0;
+    color: #a8ff37; /* Using a vibrant color for visibility */
+}
+
+.timeline-item p {
+    margin-bottom: 0; /* Adjusts bottom margin for spacing */
+}
+
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 800px) {
+    .navbar, .card-title, .card-text, .card, section {
+        padding: 0.5rem;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.1); /* Optionally change the border color to be less visible or more suitable */
+    }
+
+    .text-container {
+        width: 80%; /* Wider on small screens to accommodate smaller viewport */
+        font-size: 1.5rem; /* Smaller text on small devices */
+    }
+
+    .text-container h1 {
+        font-size: 3rem; /* Smaller font size for headings on mobile */
+    }
+
+    .text-container h4,
+    .text-container a {
+        font-size: 1.25rem; /* Smaller font size for subheadings and button text on mobile */
+    }
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibikrishnan Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@animejs/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>       
+        <nav class="navbar navbar-expand-lg navbar-black bg-black fixed-top">
+            <a class="navbar-brand" href="./index.html">Sibikrishnan A.G.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#leadership">Leadership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#other-experiences">Others</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>        
+    <main>
+        <!-- Hero -->
+        <div class="p-5 bg-image rounded-3" style="
+        background-image: url('images/outdoor-hero.jpg');
+        background-size: cover; 
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        margin-bottom: 100px;
+        ">
+            <div class="text-container" style="
+                position: absolute;
+                top: 50%;
+                left: 3%;
+                width: 35%;
+                transform: translateY(-50%);
+                text-align: left;">
+                <div class="text-white">
+                    <h1 style="font-size: 5rem;">Hello! I'm Sibi</h1>
+                    <h4 style="font-size: 2rem;">An aspiring Data Scientist and A.I. enthusiast.</h4>
+                    <a class="btn btn-outline-light btn-lg" href="#about" role="button" style="font-size: 2rem;">Find out more!</a>
+                </div>
+            </div>
+        </div>
+        <!-- About Section -->
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>I am an aspiring Data Scientist and AI enthusiast currently pursuing a Bachelor of Science(Honours) in Computer Science at Goldsmiths, University of London. With a strong foundation in Data Science and Software Engineering, I am passionate about using data to solve real-world problems!</p>
+            <section id="skills" class="container">
+                <h2>Technical Skills</h2>
+                <div class="row">
+                    <!-- Example for Python -->
+                    <div class="row text-center">
+                        <!-- Python -->
+                        <div class="col">
+                            <i class="fab fa-python"></i><br>Python
+                        </div>
+                        <!-- Scikit-Learn (No direct FontAwesome icon) -->
+                        <div class="col">
+                            <i class="fas fa-robot"></i><br>Scikit-Learn
+                        </div>
+                        <!-- Seaborn (No direct FontAwesome icon, using chart line) -->
+                        <div class="col">
+                            <i class="fas fa-chart-line"></i><br>Seaborn
+                        </div>
+                        <!-- Pandas (No direct FontAwesome icon, using file-alt for data) -->
+                        <div class="col">
+                            <i class="fas fa-file-alt"></i><br>Pandas
+                        </div>
+                        <!-- NumPy (No direct FontAwesome icon, using cube for arrays) -->
+                        <div class="col">
+                            <i class="fas fa-cube"></i><br>NumPy
+                        </div>
+                        <!-- Matplotlib (No direct FontAwesome icon, using chart-pie) -->
+                        <div class="col">
+                            <i class="fas fa-chart-pie"></i><br>Matplotlib
+                        </div>
+                        <!-- Folium (No direct FontAwesome icon, using map-marked-alt) -->
+                        <div class="col">
+                            <i class="fas fa-map-marked-alt"></i><br>Folium
+                        </div>
+                        <!-- Plotly (No direct FontAwesome icon, using chart-area) -->
+                        <div class="col">
+                            <i class="fas fa-chart-area"></i><br>Plotly
+                        </div>
+                        <!-- SQL -->
+                        <div class="col">
+                            <i class="fas fa-database"></i><br>SQL
+                        </div>
+                        <!-- GitHub -->
+                        <div class="col">
+                            <i class="fab fa-github"></i><br>GitHub
+                        </div>
+                        <!-- PowerBI (No direct FontAwesome icon, using chart-bar) -->
+                        <div class="col">
+                            <i class="fas fa-chart-bar"></i><br>PowerBI
+                        </div>
+                        <!-- HTML5 -->
+                        <div class="col">
+                            <i class="fab fa-html5"></i><br>HTML5
+                        </div>
+                        <!-- CSS -->
+                        <div class="col">
+                            <i class="fab fa-css3-alt"></i><br>CSS
+                        </div>
+                        <!-- JavaScript -->
+                        <div class="col">
+                            <i class="fab fa-js-square"></i><br>JavaScript
+                        </div>
+                        <!-- Bootstrap -->
+                        <div class="col">
+                            <i class="fab fa-bootstrap"></i><br>Bootstrap
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects" class="container mt-4">
+            <h2>Projects</h2>
+            <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <img src="images/spacex.jpg" class="card-img-top" alt="Project 1">
+                            <div class="card-body">
+                                <h5 class="card-title">SpaceX Falcon 9 Landing Analysis</h5>
+                                <p class="card-text">Exploratory Data Analysis and Predictive Analysis using machine learning to predict the landing success of SpaceX Falcon 9 rockets.</p>
+                                <p class="card-text">Performed data collection using REST API & web scrapping, data wrangling, SQL exploration, EDA and Geospatial EDA(Folium), and prediction models(Logistic Regression, SVM, KNN and Decision Tree) to gauge the success rate of future launches.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="images/space-race.jpg" class="card-img-top" alt="Project 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Space Race and Missions</h5>
+                                <p class="card-text">Exploration of Space Race trends between the USSR and the USA from 1957 done using CSV Kaggle dataset “All Space Missions from 1957” and web-scrapping using 'BeautifulSoup' on space news sites to create current trends word cloud.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+    
+        <!-- Experience Section -->
+        <section id="experience" class="container">
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">March 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h4>A.I. and Software Engineer Intern - UnravelX, Singapore</h4>
+                        <p>• Integrated GPT-3.5 Turbo models into a Unity-based game, enhancing gameplay dynamics.</p>
+                        <p>• Engineered custom GPT assistants using C# scripting for core gameplay functions.</p>
+                        <p>• Spearheaded efforts to mitigate Large Language Model hallucination by fine-tuning prompts and optimizing response parameters (Temperature & top-p).</p>
+                        <p>• Implemented a 'Request Access' feature on a WordPress site's plugin using AJAX, PHP, and JavaScript, streamlining user profile submissions via email.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">July 2023 - October 2023</div>
+                    <div class="timeline-content">
+                        <h4>Quality Assurance Engineer Intern - Trinax, Singapore</h4>
+                        <p>• Worked on 9 diverse projects involving hardware-software integration and API testing using Postman for mobile applications with content management systems, gaining Software Development Life Cycle (SDLC) and SCRUM exposure.</p>
+                        <p>• Utilized design-oriented thinking to make user interface and experience components.</p>
+                        <p>• Performed Alpha, Beta and User Acceptance Testing, documenting 467 bugs for resolution and communicated with clients and operations team.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2022 - May 2022</div>
+                    <div class="timeline-content">
+                        <h4>Shift In-Charge (Tele-ART) - Doctor Anywhere, Singapore</h4>
+                        <p>• Project manager of a virtual COVID-19 ART testing project, the first of its kind in Singapore.</p>
+                        <p>• Managed a team of 80.</p>
+                        <p>• Worked with the Vice President to implement more effective data recording methods and facilitate team collaboration.</p>
+                        <p>• Increased customer bookings from 30 in week 0 to 40,000 bookings processed by the end of tenure by analyzing data using Microsoft Excel and Tableau findings to study customer demand trends and allocate manpower accordingly.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">November 2018 - December 2018</div>
+                    <div class="timeline-content">
+                        <h4>Geospatial Data Analyst Intern - NUS ISEM, Singapore</h4>
+                        <p>• Collected data on 700 locations in Singapore for the virtual map application and analyzed the geospatial data using ArcGIS.</p>
+                        <p>• First prize winner in an internal competition where we worked as a team to find the best housing solutions using ArcGIS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Leadership Section -->
+        <section id="leadership" class="container">
+            <h2>Leadership</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-content">
+                        <h4>Project Head - Data Analytics Club</h4>
+                        <p>• Organised I.T. Day 2024 and working on DAC Academy - conducting python learning sessions with club members and student body.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-content">
+                        <h4>Head of Partnerships - Innovation and Networking Society(IONS)</h4>
+                        <p>• Organised 7 events - networking mixers, industry sharing and a hackathon, with a total attendance of 400, partnering with professionals from the FinTech, MedTech and GreenTech industries and liaising with the marketing and events team to create event plans and handle logistics.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-content">
+                        <h4>Head of Training for the International Affairs Society - Model United Nations</h4>
+                        <p>• Ran a rigorous 24-week program to train 60 members in public speaking, global issues, negotiation and research for the Harvard National MUN and Harvard World MUN competitions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Experiences Section -->
+        <section id="other-experiences" class="container">
+            <h2>Other Experiences</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">April 2024</div>
+                    <div class="timeline-content">
+                        <h4>HackOMania 2024 [Hackathon]</h4>
+                        <p>• Developed a fine-tuned Large Language Model solution to address GovTech's task of increasing access of small businesses to government schemes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">March 2024</div>
+                    <div class="timeline-content">
+                        <h4>Panelist at University Open-House Panel Session</h4>
+                        <p>• Shared my experiences as a student leader and a recipient of the SIM GE Scholarship.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2023</div>
+                    <div class="timeline-content">
+                        <h4>ASEAN-China Young Leaders Program (On-site: Siem Reap, Cambodia)</h4>
+                        <p>• Represented Singapore to partake in committee sessions that addressed regional issues of solving educational challenges through people-to-people learning.</p>
+                        <p>• Collaborated with delegates from 9 other ASEAN states and China to formulate ideas and facilitate cultural exchange.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">February 2023</div>
+                    <div class="timeline-content">
+                        <h4>Harvard National Model United Nations (On-site: Massachusetts, USA)</h4>
+                        <p>• Took part in the Harvard National MUN 2023 on 'Peaceful Uses of Outer Space'.</p>
+                        <p>• Collaborated with over 130 international delegates, creating solutions that address the space debris crisis and worldwide capacity building through negotiations in the Special Political and Decolonization Committee.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2023</div>
+                    <div class="timeline-content">
+                        <h4>IONS Altair 2023 [Hackathon]</h4>
+                        <p>• Proposed and developed a low-code solution to implement more efficient clinic resource allocation and A.I. implementation for early disease detection.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">July 2022</div>
+                    <div class="timeline-content">
+                        <h4>UIPath Robotic Process Automation(RPA) [Hackathon]</h4>
+                        <p>• Implemented RPA for automated registration of patients in clinics and created a chatbot using Google dialogflow.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2021</div>
+                    <div class="timeline-content">
+                        <h4>CBRD Medic</h4>
+                        <p>• Specialised in emergency surgical procedures and mass casualty response in chemical, biological and radiological environments and vaccinated 230 individuals during COVID-19 Vaccination Exercises in 2021.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black text-center text-lg-start">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <p>Email: <a href="mailto:OFFICIALSIBIKRISHNAN@GMAIL.COM">officialsibikrishnan@gmail.com</a></p>
+                    <p><a href="https://www.linkedin.com/in/agsibikrishnan/" target="_blank">LinkedIn</a></p>
+                    <p><a href="https://github.com/Sibikrishnan-AG" target="_blank">GitHub</a></p>
+                    <p>&copy; 2024 Sibikrishnan A.G. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
