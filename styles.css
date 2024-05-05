@@ -89,32 +89,49 @@ i {
 }
 
 
-
 /* Custom styles for carousel controls */
+/* Custom styles for carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    align-items: center; /* Center vertically */
+    top: 0;
+    bottom: 0;
+    width: 5%; /* Subtle, not too wide */
+    color: #000; /* Black arrow for visibility */
+    opacity: 0.8; /* Slightly transparent for a subtle look */
+    transition: opacity 0.25s ease; /* Smooth transition for hover effect */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Fully visible on hover */
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #000000; /* Black background for higher contrast */
-    border-radius: 50%; /* Circular background */
-    padding: 20px; /* Larger area to make the icon bigger and easier to click */
-    display: inline-block; /* Ensures proper alignment and display */
-    width: 60px; /* Specific width for the icon */
-    height: 60px; /* Specific height for the icon */
+    width: 30px;
+    height: 30px;
+    background-color: transparent; /* No background color */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.carousel-control-prev, .carousel-control-next {
-    width: 10%; /* Wider area for easier clicking */
-}
-
-/* Override the default Bootstrap SVG background for the icons */
 .carousel-control-prev-icon {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M5.5 0l-5 4 5 4v-3h3v-2h-3v-3z"/%3E%3C/svg%3E');
-    background-size: 30px; /* Increase the size of the arrow itself */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 16 16'%3E%3Cpath d='M11 1L5 8l6 7'/%3E%3C/svg%3E");
 }
 
 .carousel-control-next-icon {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M2.5 0v3h-3v2h3v3l5-4-5-4z"/%3E%3C/svg%3E');
-    background-size: 30px; /* Increase the size of the arrow itself */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 16 16'%3E%3Cpath d='M5 1l6 7-6 7'/%3E%3C/svg%3E");
 }
+
+/* Ensure controls are accessible and visible */
+.carousel-control-prev,
+.carousel-control-next {
+    display: flex;
+}
+
+
 
 /* Timeline styling */
 .timeline {
@@ -170,25 +187,50 @@ i {
         padding: 0.5rem;
     }
 
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    
-    .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.1); /* Optionally change the border color to be less visible or more suitable */
-    }
-
+    /* Hero section styling adjustments */
     .text-container {
-        width: 80%; /* Wider on small screens to accommodate smaller viewport */
-        font-size: 1.5rem; /* Smaller text on small devices */
+        width: 90%; /* Use a larger percentage to prevent text from being squeezed into a narrow column */
+        padding: 20px; /* Add padding for better text readability */
+        position: absolute;
+        top: 30%; /* Lower the top position to avoid covering the face in the image */
+        left: 5%; /* Adjust left position for better centering */
+        transform: translateY(-50%);
+        text-align: left;
     }
 
     .text-container h1 {
-        font-size: 3rem; /* Smaller font size for headings on mobile */
+        font-size: 1rem; /* Smaller font size for the main heading */
     }
 
-    .text-container h4,
-    .text-container a {
-        font-size: 1.25rem; /* Smaller font size for subheadings and button text on mobile */
+    .text-container h4 {
+        font-size: 0.6rem; /* Smaller font size for the subheading */
     }
+
+    .text-container a {
+        font-size: 0.5rem; /* Smaller font size for the button */
+        padding: 8px 16px; /* Adjust padding for a smaller button */
+    }
+
+    /* Enhance navbar-toggler visibility */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        /* Ensure the SVG is white to stand out on the darker background */
+    }
+
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.3); /* Lighter border color to enhance visibility */
+    }
+
+
+    /* Custom styles for carousel controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%; /* Larger clickable area for mobile */
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 25px; /* Slightly smaller icons for mobile screens */
+        height: 25px;
+    }
+
 }
